@@ -9,8 +9,11 @@ class Triangulo:
         return self.lado1 + self.lado2 + self.lado3
     
     def calcular_area(self):
-        # Calculando a área usando a fórmula de Heron
         s = self.calcular_perimetro() / 2
         area = (s * (s - self.lado1) * (s - self.lado2) * (s - self.lado3)) ** 0.5
         return area
 
+if __name__ == "__main__":
+     triangulo1 = Triangulo(3, 4, 5)
+     print("Perímetro do triângulo:", triangulo1.calcular_perimetro())
+     print("Área do triângulo:", triangulo1.calcular_area())
